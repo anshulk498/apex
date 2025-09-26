@@ -19,7 +19,7 @@ public class Login extends BaseClass{
 	
 	@Test
 	public void adminLogin() throws Throwable {
-		
+		//anshul
 		
 		String ExpectedURL="https://admindevdatacollect.equalyz.ai/dashboard";
 		//wb.getExplicitWait(driver, ExpectedURL);
