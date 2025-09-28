@@ -3,19 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="devadmin.CreateTYK">
+      <class name="devadmin.CreateTYKTest">
         <methods>
-          <include name="BM"/>
-          <include name="AM"/>
-          <include name="AT"/>
           <include name="AC"/>
-          <include name="BT"/>
-          <include name="AS"/>
-          <include name="createTYK"/>
           <include name="BC"/>
-          <include name="BS"/>
+          <include name="createTYK"/>
         </methods>
-      </class> <!-- devadmin.CreateTYK -->
+      </class> <!-- devadmin.CreateTYKTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
