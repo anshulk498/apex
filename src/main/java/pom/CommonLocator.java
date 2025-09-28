@@ -17,7 +17,7 @@ public class CommonLocator {
 	 
 	 @FindBy(xpath = "//span[contains(.,'Test your Knowledge')]") private WebElement tyk;
 	 
-	 
+	 @FindBy(xpath = "//div[@class='iziToast-texts']") private WebElement SuccessfullToast;
 	 public WebElement getTyk() {
 		 return tyk;
 	 }
@@ -25,4 +25,10 @@ public class CommonLocator {
 	 public void getClickTyk() {
 	    tyk.click();
 	 }
+	 
+	 public String getSuccessfullToast() {
+		    
+		    return SuccessfullToast.getText();
+		 }
+	 
 }

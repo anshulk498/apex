@@ -1,49 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-26T22:39:28 IST" name="Default suite" finished-at="2025-09-26T22:40:27 IST" duration-ms="59645">
+  <suite started-at="2025-09-28T15:25:08 IST" name="Suite" finished-at="2025-09-28T15:25:43 IST" duration-ms="35049">
     <groups>
+      <group name="smoke">
+        <method signature="CreateTYKTest.createTYK()[pri:0, instance:devadmin.CreateTYKTest@32811494]" name="createTYK" class="devadmin.CreateTYKTest"/>
+        <method signature="LoginTest.adminLogin()[pri:0, instance:devadmin.LoginTest@5bd82fed]" name="adminLogin" class="devadmin.LoginTest"/>
+      </group> <!-- smoke -->
     </groups>
-    <test started-at="2025-09-26T22:39:28 IST" name="Default test" finished-at="2025-09-26T22:40:27 IST" duration-ms="59645">
-      <class name="devadmin.CreateTYK">
-        <test-method is-config="true" signature="BS()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:39:28 IST" name="BS" finished-at="2025-09-26T22:39:28 IST" duration-ms="14" status="PASS">
+    <test started-at="2025-09-28T15:25:08 IST" name="FirefoxTest" finished-at="2025-09-28T15:25:22 IST" duration-ms="13865">
+      <class name="devadmin.LoginTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:08 IST" name="beforeSuite" finished-at="2025-09-28T15:25:08 IST" duration-ms="10" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BS -->
-        <test-method is-config="true" signature="BT()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:39:28 IST" name="BT" finished-at="2025-09-26T22:39:28 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:08 IST" name="beforeTest" finished-at="2025-09-28T15:25:08 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BT -->
-        <test-method is-config="true" signature="BC()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:39:28 IST" name="BC" finished-at="2025-09-26T22:39:42 IST" duration-ms="14104" status="PASS">
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:08 IST" name="beforeClass" finished-at="2025-09-28T15:25:17 IST" duration-ms="9209" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BC -->
-        <test-method is-config="true" signature="BM()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:39:42 IST" name="BM" finished-at="2025-09-26T22:39:42 IST" duration-ms="1" status="PASS">
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:17 IST" name="beforeMethod" finished-at="2025-09-28T15:25:17 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- BM -->
-        <test-method signature="createTYK()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:39:42 IST" name="createTYK" finished-at="2025-09-26T22:40:27 IST" duration-ms="45463" status="PASS">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="adminLogin()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:17 IST" name="adminLogin" finished-at="2025-09-28T15:25:19 IST" duration-ms="2089" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- adminLogin -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:19 IST" name="afterMethod" finished-at="2025-09-28T15:25:19 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:19 IST" name="afterClass" finished-at="2025-09-28T15:25:22 IST" duration-ms="2514" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:22 IST" name="afterTest" finished-at="2025-09-28T15:25:22 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method is-config="true" signature="afterSuite()[pri:0, instance:devadmin.LoginTest@5bd82fed]" started-at="2025-09-28T15:25:43 IST" name="afterSuite" finished-at="2025-09-28T15:25:43 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- devadmin.LoginTest -->
+    </test> <!-- FirefoxTest -->
+    <test started-at="2025-09-28T15:25:08 IST" name="ChromeTest" finished-at="2025-09-28T15:25:43 IST" duration-ms="35049">
+      <class name="devadmin.CreateTYKTest">
+        <test-method is-config="true" signature="beforeTest()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:08 IST" name="beforeTest" finished-at="2025-09-28T15:25:08 IST" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:08 IST" name="beforeClass" finished-at="2025-09-28T15:25:14 IST" duration-ms="5954" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:14 IST" name="beforeMethod" finished-at="2025-09-28T15:25:14 IST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="createTYK()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:14 IST" name="createTYK" finished-at="2025-09-28T15:25:42 IST" duration-ms="28719" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createTYK -->
-        <test-method is-config="true" signature="AM()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:40:27 IST" name="AM" finished-at="2025-09-26T22:40:27 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:42 IST" name="afterMethod" finished-at="2025-09-28T15:25:42 IST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AM -->
-        <test-method is-config="true" signature="AC()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:40:27 IST" name="AC" finished-at="2025-09-26T22:40:27 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:42 IST" name="afterClass" finished-at="2025-09-28T15:25:43 IST" duration-ms="310" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AC -->
-        <test-method is-config="true" signature="AT()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:40:27 IST" name="AT" finished-at="2025-09-26T22:40:27 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- afterClass -->
+        <test-method is-config="true" signature="afterTest()[pri:0, instance:devadmin.CreateTYKTest@32811494]" started-at="2025-09-28T15:25:43 IST" name="afterTest" finished-at="2025-09-28T15:25:43 IST" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- AT -->
-        <test-method is-config="true" signature="AS()[pri:0, instance:devadmin.CreateTYK@3b0090a4]" started-at="2025-09-26T22:40:27 IST" name="AS" finished-at="2025-09-26T22:40:27 IST" duration-ms="1" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- AS -->
-      </class> <!-- devadmin.CreateTYK -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterTest -->
+      </class> <!-- devadmin.CreateTYKTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Suite -->
 </testng-results>

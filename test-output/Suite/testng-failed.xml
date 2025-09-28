@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="3" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" name="Test(failed)">
+<suite name="Failed suite [Suite]">
+  <test thread-count="5" name="FirefoxTest(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="devadmin.Login">
+      <class name="devadmin.LoginTest">
         <methods>
-          <include name="BM"/>
-          <include name="AM"/>
+          <include name="beforeClass"/>
           <include name="adminLogin"/>
-          <include name="AT"/>
-          <include name="AS"/>
-          <include name="AC"/>
-          <include name="BT"/>
-          <include name="BC"/>
-          <include name="BS"/>
+          <include name="beforeMethod"/>
+          <include name="afterTest"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
+          <include name="afterMethod"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- devadmin.Login -->
-      <class name="devadmin.CreateTYK">
-        <methods>
-          <include name="BM"/>
-          <include name="AM"/>
-          <include name="AT"/>
-          <include name="AC"/>
-          <include name="BT"/>
-          <include name="AS"/>
-          <include name="createTYK"/>
-          <include name="BC"/>
-          <include name="BS"/>
-        </methods>
-      </class> <!-- devadmin.CreateTYK -->
+      </class> <!-- devadmin.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- FirefoxTest(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,12 +1,18 @@
 package generic_utility;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.function.Function;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.OutputType;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -28,6 +34,31 @@ public class WebDriver_Utility {
 		
 	}
 	
+	public void getExplicitWait(WebDriver driver,WebElement ele) {
+		WebDriverWait wb=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wb.until(ExpectedConditions.visibilityOf(ele));
+		
+	}
+	
+	public static String takeScreenshot(WebDriver driver,String screenshotName) {
+		try {
+		TakesScreenshot ts=(TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		// Add timestamp to avoid overwriting
+        String timestamp = LocalDateTime.now().toString().replace(":", "-").replace(".", "-");
+        String path = "./Screenshots/" + screenshotName + "_" + timestamp + ".png";
+		File dest=new File(path);
+		
+	
+			FileUtils.copyFile(src, dest);
+			return dest.getAbsolutePath();
+		} catch (IOException e) {
+		
+			e.printStackTrace();
+			System.out.println("Error while taking screenshot: " + e.getMessage());
+            return null;
+		}
+	}
 	
 	
 	public void getFluentWaitForURL(WebDriver driver, String expectedUrl) {
