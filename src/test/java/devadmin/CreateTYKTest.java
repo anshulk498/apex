@@ -31,7 +31,7 @@ public class CreateTYKTest extends BaseClass {
 		cm.getClickTyk();
 		TYK tyk=new TYK(getDriver());
 		tyk.clickOnAddTest(getDriver());
-		tyk.createTyk_ByAudio_Spantanous(getDriver(), "English", "Spontaneous", "this is english", "1", "20","1","None","None", "4", "1", "1", "1");
+		tyk.createTyk_ByAudio_Spantanous(getDriver(), "English", "Spontaneous", "this is english1", "1", "20","1","None","None", "4", "1", "1", "1");
 //		wu.getFluentWaitForWebelementL(driver, tyk.getAddTest());
 		wu.getExplicitWait(getDriver(), tyk.getAddTest());
 		String actualToast = cm.getSuccessfullToast();
