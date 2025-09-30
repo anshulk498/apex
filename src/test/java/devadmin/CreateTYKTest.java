@@ -14,7 +14,7 @@ import org.apache.logging.log4j.Logger;
 
 
 public class CreateTYKTest extends BaseClass {
-    
+    //swtich
 	private static final Logger log = LogManager.getLogger(CreateTYKTest.class);
 	@Test(groups = {"smoke"}, retryAnalyzer = generic_utility_test.RetryAnalyzerImplementation.class)
 
