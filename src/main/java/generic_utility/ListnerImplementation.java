@@ -1,4 +1,4 @@
-package generic_utility_test;
+package generic_utility;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

@@ -28,9 +28,13 @@ public class TYK {
      
      @FindBy(xpath = "//span[contains(.,'Add Test')]") private WebElement addtest;
      
+     @FindBy(id= "validateOnly_category_id") private WebElement clickCategory;
+     
      @FindBy(xpath = "(//div[contains(@class,'rc-virtual-list-holder-inner')])[1]/div") private List<WebElement> dropdownListTaskLangauge;
      
      @FindBy(xpath = "//div[@class='rc-virtual-list-holder-inner']/div") private List<WebElement> dropdownListcategorytype;
+     
+     @FindBy(xpath = "//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'hidden'))]//div[@class='ant-select-item-option-content']") private List<WebElement> Categorydropdown;
      
      @FindBy(xpath = "//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'hidden'))]//div[@class='ant-select-item-option-content']") private List<WebElement> dropdownRequiredLanaguage;
      
@@ -76,6 +80,13 @@ public class TYK {
      @FindBy(xpath = "//button[@type='submit']") private WebElement create;
      
      
+     public WebElement getclickCatgeory() {
+    	 return clickCategory;
+     }
+     
+     public void clickCatgeory(WebDriver driver) {
+    	 clickCategory.click();
+     }
      public WebElement getMove_to_None() {
     	 return move_to_None;
      }
@@ -118,7 +129,9 @@ public class TYK {
 
      
  
-     
+     public List<WebElement> getdropdownCategory() {
+    	 return Categorydropdown;
+     }
      public List<WebElement> getdropdownListTaskLangauge() {
     	 return dropdownListTaskLangauge;
      }
@@ -160,21 +173,32 @@ public class TYK {
      }
 	
      
-     public void createTyk_ByAudio_Spantanous(WebDriver driver,String Task_Language,String Categorytype,String description,String Min_duration,String max_duration,String cost,String RequiredLangauge,String Occuption,String deadline,String extend_deadline,String sup_deadline,String sup_extend_deadline) throws Throwable {
-    	 
+     public void createTyk_ByAudio_Spantanous(WebDriver driver,String category,String Task_Language,String Categorytype,String description,String Min_duration,String max_duration,String cost,String RequiredLangauge,String Occuption,String deadline,String extend_deadline,String sup_deadline,String sup_extend_deadline) throws Throwable {
+    	
+    	 clickCatgeory(driver);
+    	 Thread.sleep(2000);
+    	 getdropdownCategory();
+    	 Thread.sleep(1000);
+    	 selectdropdown(driver, category);
+    	 Thread.sleep(1000);
     	clicktasklanguage(driver);
  		Thread.sleep(1000);
  		selectdropdown(driver, Task_Language);
  	    clickcategorytype(driver);
  	    Thread.sleep(1000);
  	    selectdropdownCategoryType(driver, Categorytype);
- 		gettaskDescrtiontextArea().sendKeys(description);
- 		minduration.click();
- 		Thread.sleep(2000);
- 		minduration.sendKeys(Min_duration);
- 		maxduration.click();
- 		Thread.sleep(2000);
- 		maxduration.sendKeys(max_duration);
+	    gettaskDescrtiontextArea().sendKeys(description);
+ 		Thread.sleep(1000);
+ 		System.out.print("hi");
+ 		if (!category.equalsIgnoreCase("Text")) {
+ 		    minduration.click();
+ 		    Thread.sleep(2000);
+ 		    minduration.sendKeys(Min_duration);
+
+ 		    maxduration.click();
+ 		    Thread.sleep(2000);
+ 		    maxduration.sendKeys(max_duration);
+ 		}
  		addcoins.sendKeys(cost);
 		Thread.sleep(1000);
         requiredLanguage.click();
@@ -206,6 +230,11 @@ public class TYK {
  		SuperReviwer_Extend_Deadline.click();
  		Thread.sleep(1000);
  		selectdropdownSuper_Reviwer_Deadline(driver, sup_extend_deadline);
+ 		Thread.sleep(2000);
+ 		
+   	
+ 		
+ 		
  		create.click();
  		
      }

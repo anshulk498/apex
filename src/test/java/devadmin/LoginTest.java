@@ -11,12 +11,12 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import generic_utility.WebDriver_Utility;
-import generic_utility_test.BaseClass;
+//import generic_utility_test.BaseClass;
 import pom.CommonLocator;
 import pom.TYK;
 
 
-public class LoginTest extends BaseClass{
+public class LoginTest extends generic_utility.BaseClass{
 	WebDriver_Utility wb=new WebDriver_Utility();
 	private static final Logger log = LogManager.getLogger(LoginTest.class);
 	@Test(groups = {"smoke"})
@@ -30,6 +30,16 @@ public class LoginTest extends BaseClass{
 		Assert.assertEquals(actualurl, ExpectedURL);
 		
 	}
+	
+	
+	@Test
+	public void LoginTest() {
+		
+		
+	}
+	
+	
+	
 	
 //	@Test(dependsOnMethods = "adminLogin")
 //	public void createTYK() throws InterruptedException {

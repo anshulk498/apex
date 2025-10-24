@@ -1,4 +1,4 @@
-package generic_utility_test;
+package generic_utility;
 
 import org.testng.IRetryAnalyzer;
 import org.testng.ITestResult;

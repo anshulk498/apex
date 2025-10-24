@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="devadmin.CreateTYKTest">
+      <class name="devadmin.TestRetry">
         <methods>
-          <include name="AC"/>
-          <include name="BC"/>
-          <include name="createTYK"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- devadmin.CreateTYKTest -->
+      </class> <!-- devadmin.TestRetry -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

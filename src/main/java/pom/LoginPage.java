@@ -20,7 +20,8 @@ public class LoginPage extends Property_Utility {
 	  
 	  
 	  @FindBy(id = "email") private WebElement email;
-	  @FindBy(id="password") private WebElement password;
+	  
+	    @FindBy(id="password") private WebElement password;
 	  @FindBy(xpath = "//button[contains(@type,'submit')]") private WebElement login;
 	  
 	  public WebElement getEmail() {

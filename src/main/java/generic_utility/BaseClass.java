@@ -1,4 +1,4 @@
-package generic_utility_test;
+package generic_utility;
 
 import java.time.Duration;
 
@@ -21,7 +21,7 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import generic_utility.Property_Utility;
-import io.github.bonigarcia.wdm.WebDriverManager;
+
 import pom.LoginPage;
 
 public class BaseClass {
@@ -60,28 +60,28 @@ public class BaseClass {
 
         switch (browser.toLowerCase()) {
             case "chrome":
-                WebDriverManager.chromedriver().setup();
+               // WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--disable-notifications");
                 drv = new ChromeDriver(chromeOptions);
                 break;
 
             case "edge":
-                WebDriverManager.edgedriver().setup();
+              //  WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--disable-notifications");
                 drv = new EdgeDriver(edgeOptions);
                 break;
 
             case "firefox":
-                WebDriverManager.firefoxdriver().setup();
+              //  WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.addPreference("dom.webnotifications.enabled", false);
                 drv = new FirefoxDriver(firefoxOptions);
                 break;
 
             default:
-                WebDriverManager.chromedriver().setup();
+              //  WebDriverManager.chromedriver().setup();
                 chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--disable-notifications");
                 drv = new ChromeDriver(chromeOptions);

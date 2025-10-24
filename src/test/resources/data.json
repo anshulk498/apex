@@ -1,0 +1,13 @@
+{
+  "employee": {
+    "id": 101,
+    "name": "Anshul",
+    "department": "IT",
+    "skills": ["Java", "Selenium", "SQL", "API Testing"],
+    "manager": {
+      "id": 201,
+      "name": "Rohit"
+    }
+  },
+  "url": "https://example.com/api/employees"
+}
